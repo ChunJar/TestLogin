@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@mipmap/ic_launcher"
+    android:background="@mipmap/back"
     tools:context="com.example.cj.testlogin.MainActivity">
 
     <TextView
@@ -55,6 +55,14 @@
             android:layout_toRightOf="@+id/pass"
             android:hint="请输入密码"
             android:inputType="textPassword" />
+        <CheckBox
+            android:id="@+id/isShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示密码"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/password"
+            />
     </RelativeLayout>
 
     <LinearLayout
@@ -69,17 +77,20 @@
             android:textSize="18sp" />
 
         <RadioGroup
+            android:id="@+id/sexGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/nan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="男" />
 
             <RadioButton
+                android:id="@+id/nv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -146,6 +157,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
